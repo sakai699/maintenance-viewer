@@ -1,0 +1,21 @@
+/* Drag-and-drop PDF drawing viewer */
+.dw-simple-view{display:none;position:absolute;inset:0;z-index:140;background:#18232c;color:#dce8ed}
+body.drawing-simple-mode .viewer-wrap #cesiumContainer,
+body.drawing-simple-mode .viewer-wrap #revitViewCube,
+body.drawing-simple-mode .viewer-wrap .viewer-work-status,
+body.drawing-simple-mode .viewer-wrap .viewer-help{display:none!important}
+body.drawing-simple-mode .dw-simple-view{display:flex;flex-direction:column}
+.dw-simple-head{height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;background:#0d1921;border-bottom:1px solid #35505d}
+.dw-simple-head b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dw-simple-head div{display:flex;gap:7px}.dw-simple-head button{width:auto!important;padding:7px 10px!important;font-size:11px!important}
+.dw-drop-zone{display:grid;gap:4px;place-items:center;margin:10px 0;padding:18px 8px;border:2px dashed #278da0;border-radius:7px;background:#10242d;color:#d9f8ff;cursor:pointer;text-align:center}
+.dw-drop-zone span{color:#87aab5;font-size:10px}.dw-drop-zone:hover,.dw-drop-zone.dragging{border-color:#42e0c3;background:#143b3a;box-shadow:0 0 0 3px rgba(66,224,195,.12)}
+.dw-message{margin:8px 0;padding:7px 8px;border-left:3px solid #1e9eb3;background:#10222b;color:#92bdc9;font-size:10px;overflow-wrap:anywhere}.dw-message.error{border-color:#d75158;color:#ffb8bd;background:#2d171c}
+.dw-center-drop{flex:1;display:grid;place-items:center;padding:24px;background:#17232c}
+.dw-center-drop.has-pdf{display:none}.dw-center-drop-inner{display:grid;gap:10px;place-items:center;width:min(560px,80%);padding:54px 30px;border:3px dashed #33798a;border-radius:12px;background:#101e27;color:#d9f8ff;text-align:center}
+.dw-center-drop-inner strong{font-size:20px}.dw-center-drop-inner span{color:#86a8b3}.dw-center-drop-inner button{margin-top:8px;padding:10px 20px!important}
+.dw-center-drop.dragging .dw-center-drop-inner{border-color:#42e0c3;background:#143b3a;transform:scale(1.01)}
+#dwSimpleFrame{display:none;flex:1;width:100%;min-height:0;border:0;background:#3b4147}#dwSimpleFrame.active{display:block}
+#dwList .dw-card{width:100%;grid-template-columns:minmax(0,1fr) auto auto;text-align:left;color:#dce8ed}#dwList .dw-card .dw-meta{align-self:center}
+
+.dw-add-drop{padding:9px 12px;border-bottom:1px dashed #33798a;background:#10242d;color:#8fc5d1;text-align:center;font-size:11px}
+.dw-add-drop.dragging{background:#143b3a;color:#d9fff7;border-color:#42e0c3;box-shadow:inset 0 0 0 2px #42e0c3}
